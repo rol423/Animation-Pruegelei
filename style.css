@@ -19,20 +19,20 @@ body{
 #stern { 
     background: url('img/stern.png') no-repeat left top transparent; 
     z-index: 2;
-    -webkit-transition: -webkit-transform 1.5s ease-in-out 1s, opacity 1.5s linear 1s;
-    transition: transform 1.5s ease-in-out 1s, opacity 1.5s linear 1s;
+    transition: transform 1.5s ease-in-out, opacity 1.5s linear;
+    transition-delay: 1s;
 }
 #stern2 { 
     background: url('img/stern.png') no-repeat left top transparent; 
     z-index: 3;
-    -webkit-transition: -webkit-transform 1s ease-out 2s, opacity 1s linear 2s;
-    transition: transform 1s ease-out 2s, opacity 1s linear 2s;
+    transition: transform 1s ease-out, opacity 1s linear;
+    transition-delay: 2s;
 }
 #stern3 { 
     background: url('img/stern.png') no-repeat left top transparent; 
     z-index: 3;
-    -webkit-transition: -webkit-transform 0.5s ease-out 3s, opacity 0.5s linear 3s;
-    transition: transform 0.5s ease-out 3s, opacity 0.5s linear 3s;
+    transition: transform 0.5s ease-out, opacity 0.5s linear;
+    transition-delay: 3s;
 } 
 #staubwolke { 
     margin-left: -50px;

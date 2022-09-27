@@ -15,7 +15,7 @@ body{
 #box    { 
     background: #ccc;
     z-index: 99;
-}
+} 
 #stern { 
     background: url('img/stern.png') no-repeat left top transparent; 
     z-index: 2;

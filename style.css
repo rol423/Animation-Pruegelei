@@ -1,0 +1,63 @@
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+
+#stern, #stern2, #stern3, #staubwolke, #box {
+    width: 50px; 
+    height: 50px; 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: 40px 40px !important;
+}
+#box    { 
+    background: #ccc;
+    z-index: 99;
+}
+#stern { 
+    background: url('img/stern.png') no-repeat left top transparent; 
+    z-index: 2;
+    -webkit-transition: -webkit-transform 1.5s ease-in-out 1s, opacity 1.5s linear 1s;
+    transition: transform 1.5s ease-in-out 1s, opacity 1.5s linear 1s;
+}
+#stern2 { 
+    background: url('img/stern.png') no-repeat left top transparent; 
+    z-index: 3;
+    -webkit-transition: -webkit-transform 1s ease-out 2s, opacity 1s linear 2s;
+    transition: transform 1s ease-out 2s, opacity 1s linear 2s;
+}
+#stern3 { 
+    background: url('img/stern.png') no-repeat left top transparent; 
+    z-index: 3;
+    -webkit-transition: -webkit-transform 0.5s ease-out 3s, opacity 0.5s linear 3s;
+    transition: transform 0.5s ease-out 3s, opacity 0.5s linear 3s;
+}
+#staubwolke { 
+    margin-left: -50px;
+    z-index: 1;
+    background: url('img/staubwolke.jpg') no-repeat left top transparent; 
+    -webkit-transition: -webkit-transform 5s ease-in-out, opacity 5s ease-in-out;
+	transition: transform 5s ease-out, opacity 5s ease-out;
+}
+
+.animated #stern   {
+    opacity: 0;
+    transform: scale(1.5) translate(-400px, -50px) rotate(480deg);
+}
+.animated #stern2   {
+    opacity: 0;
+    transform: scale(0.8) translate(-50px, -400px) rotate(700deg);
+}
+.animated #stern3   {
+    opacity: 0;
+    transform: scale(4) translate(-20px, -30px) rotate(200deg);
+}
+.animated #staubwolke   {
+    opacity: 0;
+    transform: scale(4) translate(-50px, -100px);
+}
+
+.windy #staubwolke {  }
+ 

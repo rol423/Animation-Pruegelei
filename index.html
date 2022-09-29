@@ -3,16 +3,33 @@
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="document.getElementsByTagName('body')[0].className = 'animated';">
+<body onload="window.setInterval(wind, 800);">
     
 <div id="box"></div> 
 <div id="stern"></div> 
 <div id="stern2"></div> 
 <div id="stern3"></div> 
-<div id="staubwolke"></div> 
+<div id="staubwolke"></div>
+<div id="blitz"></div> 
 
 <script>
+function wind() {
+    const direction = Math.random() * 100;
 
+    document.getElementById('staubwolke').style.marginLeft = parseInt(window.getComputedStyle(document.getElementById('staubwolke')).marginLeft) + parseInt(direction) + "px";
+
+    const blitz_offset = Math.random() * 150;
+    document.getElementById('blitz').style.marginLeft = parseInt(direction) + "px";
+    document.getElementById('blitz').style.marginTop = parseInt(blitz_offset) + "px";
+
+    console.log(direction, blitz_offset, window.getComputedStyle(document.getElementById('staubwolke')).marginLeft);
+    
+    if (document.getElementsByTagName('body')[0].className.indexOf('blitzed') === -1) {
+        document.getElementsByTagName('body')[0].className = 'animated blitzed';
+    } else {
+        document.getElementsByTagName('body')[0].className = 'animated';
+    }
+}
 </script>
 </body>
 </html>     

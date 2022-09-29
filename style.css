@@ -4,7 +4,7 @@ body{
 }
 
 
-#stern, #stern2, #stern3, #staubwolke, #box {
+#stern, #stern2, #stern3, #staubwolke, #box, #blitz {
     width: 50px; 
     height: 50px; 
     position: absolute;
@@ -19,28 +19,36 @@ body{
 #stern { 
     background: url('img/stern.png') no-repeat left top transparent; 
     z-index: 2;
-    transition: transform 1.5s ease-in-out, opacity 1.5s linear;
+    transition: transform 0.8s ease-in-out, opacity 0.8s linear;
     transition-delay: 1s;
 }
 #stern2 { 
     background: url('img/stern.png') no-repeat left top transparent; 
     z-index: 3;
-    transition: transform 1s ease-out, opacity 1s linear;
-    transition-delay: 2s;
+    transition: transform 0.6s ease-out, opacity 0.6s linear;
+    transition-delay: 1.7s;
 }
 #stern3 { 
     background: url('img/stern.png') no-repeat left top transparent; 
     z-index: 3;
-    transition: transform 0.5s ease-out, opacity 0.5s linear;
-    transition-delay: 3s;
+    transition: transform 0.4s ease-out, opacity 0.4s linear;
+    transition-delay: 2.4s;
 } 
 #staubwolke { 
-    margin-left: -50px;
+    padding-left: -50px;
     z-index: 1;
     background: url('img/staubwolke.jpg') no-repeat left top transparent; 
-    -webkit-transition: -webkit-transform 5s ease-in-out, opacity 5s ease-in-out;
-	transition: transform 5s ease-out, opacity 5s ease-out;
+    -webkit-transition: -webkit-transform 5s ease-in-out, opacity 5s ease-in-out, margin 2s ease-out;
+	transition: transform 5s ease-out, opacity 5s ease-out, margin 2s ease-out;
 }
+#blitz { 
+    background: url('img/blitz.png') no-repeat left top transparent; 
+    z-index: 105;
+    transition: opacity 0.3s ease-in;
+    transition-delay: 0.1s;
+    visibility: hidden;
+    transform: scale(4);
+} 
 
 .animated #stern   {
     opacity: 0;
@@ -57,6 +65,10 @@ body{
 .animated #staubwolke   {
     opacity: 0;
     transform: scale(4) translate(-50px, -100px);
+}
+.blitzed #blitz   {
+    opacity: 0;
+    visibility: visible;
 }
 
 .windy #staubwolke {  }
